@@ -1,0 +1,12 @@
+<div class="u-fit u-block u-relative u-vacuum" @touchstart="onTouchStart" @touchend="onTouchEnd" @mousemove="onMouseMove"  @click="onClick">
+	<div class="c-slider-bg--top u-absolute u-h1of2 u-fit-w">
+		<app-slide-up></app-slide-up>
+	</div>
+	<div class="c-slider-bg--bottom u-absolute u-h1of2 u-fit-w">
+		<!-- PUT HERE CODE SLIDER BOTTOM -->
+		<!-- <app-slide-down></app-slide-down> -->
+	</div>
+	<div class="u-fit-h u-relative u-inline-block u-w8of12 u-marg-l-w2of12">
+		<app-slide-picture v-for="( index, item ) in slides" :current-index="currentIndex" :index="index" :mouse-pos="mousePos" @slide:register="registerSlide" @slide:deleter="deleterSlide" :content="item" ></app-slide-picture>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<div class="u-fit u-block u-relative u-vacuum" @touchstart="onTouchStart" @touchend="onTouchEnd" @mousemove="onMouseMove"  @click="onClick">
+	<div class="o-wrapper--valign u-fit-h u-w2of12 u-inline-block">
+		<app-slide-data v-for="( index, item ) in slides" :current-index="currentIndex" :index="index" :content="item"></app-slide-data>
+	</div>
+	<div class="c-SlideshowHome u-fit-h u-relative u-w8of12 u-inline-block">
+		<app-slide-picture v-for="( index, item ) in slides" :current-index="currentIndex" :index="index" :mouse-pos="mousePos" @slide:register="registerSlide" @slide:deleter="deleterSlide" :content="item" ></app-slide-picture>
+	</div>
+</div>

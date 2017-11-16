@@ -1,0 +1,35 @@
+.t-footer {
+    @media $breakpoints.sm {
+        margin-bottom 75px
+    }
+}
+
+.t-footer__link {
+	 @extends $reset-link;
+	 
+	font-size 13;
+	font-family "Arial";
+	
+    @media $breakpoints.sm {
+        font-size 18
+    }	
+
+}
+
+.t-footer--article {
+	border-top 1px solid rgba(#a9d4e6, .2);
+	border-bottom 1px solid rgba(#a9d4e6, .2);
+}
+
+
+.t-footer__link,
+.t-footer__link-social {
+	opacity 1
+	transform translateZ(0)
+	transition .45s $ease-out-quart
+		
+	&:hover {
+		opacity .7
+		transform translateZ(0)
+	}
+}

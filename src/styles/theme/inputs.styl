@@ -1,0 +1,75 @@
+// --------------------------------------------------
+// input reset
+// --------------------------------------------------
+
+.t-input {
+    @extends $reset-input
+}
+
+// --------------------------------------------------
+// headings
+// --------------------------------------------------
+
+
+.t-textarea {
+    @extends .t-input
+}
+
+.t-input--text {
+    @extends .t-input
+}
+
+
+::-webkit-input-placeholder { 
+
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.t-input--select {
+	@extends .t-input
+	
+	select {
+		appearance none
+		background transparent
+		outline 0
+		border 0
+	}
+}
+
+select::-ms-expand {
+    display none
+}
+
+.t-input--text {
+	height 60px
+}
+
+.t-input--tall {
+	height 67px
+}
+
+.t-input--borders {
+	border 2px solid $colors['gray-lighter'];
+}
+
+.t-input--gray-borders {
+	border 1px solid rgba($colors['white'],.2);
+}
+
+.t-input--white-borders {
+	border 1px solid rgba($colors['white'],1);
+}
+
+.t-input-placeholder--white {
+	&::-webkit-input-placeholder {
+		color white
+	}
+}
+
+.t-textarea {
+	height 164px
+	max-width 100%
+}

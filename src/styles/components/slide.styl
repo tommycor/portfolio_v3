@@ -1,0 +1,48 @@
+.c-slide {
+	&.is-current {
+		z-index 1
+		& .c-slide__img {
+			transform scale( 1 ) translateZ( 0 )
+			transition transform .7s 2s $ease-out-quart
+		}
+		& .c-slide__img__container {
+			transform translate3d( 0, 0, 0 )
+			transition transform 1s 1s $ease-out-quart
+		}
+	}
+	&.is-prev {
+		& .c-slide__img {
+			transform scale( 0.85 ) translateZ( 0 )
+			transition transform .7s $ease-out-quart
+		}
+		& .c-slide__img__container {
+			transform translate3d( 0, -100vh, 0 )
+			transition transform 1s .7s $ease-out-quart
+		}
+	}
+	&.is-next {
+		z-index 1
+		& .c-slide__img {
+			transform scale( 0.85 ) translateZ( 0 )
+			transition transform .7s $ease-out-quart
+		}
+		& .c-slide__img__container {
+			transform translate3d( 0, 100vh, 0 )
+			transition transform 1s .7s $ease-out-quart
+		}
+	}
+}
+
+.c-slide__img {
+	transition transform 1s $ease-out-quart
+	transform translateZ( 0 )
+}
+
+.c-slide__img__container {
+	transform translateZ( 0 )
+	transition transform 1s $ease-out-quart
+}
+
+.c-slide__wrapper {
+	height 80%
+}

@@ -1,0 +1,90 @@
+// --------------------------------------------------
+// Text
+// --------------------------------------------------
+
+.t-text {
+    @extends $reset-paragraph
+
+    font-family $font-base
+    font-size $font-size-sm
+}
+
+
+/**** FONT FAMILY ****/
+
+.t-text--semi-bold {
+    font-family $font-semi-bold
+}
+
+.t-text--serif {
+	font-family $font-serif
+}
+
+/**** FONT SIZE ****/
+
+.t-text--xs {
+    @extends .t-text;
+    font-size $font-size-xs 
+}
+
+.t-text--sm {
+	@extends .t-text;
+	font-size $font-size-sm
+}
+
+.t-text--md {
+    @extends .t-text;
+    font-size: $font-size-md
+}
+
+.t-text--lg {
+    @extends .t-text;
+    font-size: $font-size-lg
+    
+    @media $breakpoints.sm {
+        font-size 18
+    }
+}
+
+.t-text--xl {
+    font-size $font-size-xl
+    
+    @media $breakpoints.sm {
+        font-size 20
+    }
+}
+
+
+.t-text--xxl {
+    font-size $font-size-xxl
+    
+    @media $breakpoints.sm {
+        font-size 25
+    }
+}
+
+
+/**** LETTER SPACING ****/
+
+.t-text--wide {
+    letter-spacing 0.06em
+}
+
+
+/**** LINE HEIGHT ****/
+
+.t-text--base {
+    line-height 1.5;
+}
+
+.t-text-lh--sm {
+    line-height 1.1;
+}
+
+.t-text-lh--md {
+    line-height 1.7;
+}
+
+.t-text-lh--lg {
+    line-height 2.1;
+}
